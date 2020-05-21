@@ -127,7 +127,20 @@
               </div>
           </span>
         </div>
-  
+
+      <div class="breadcrumbs">
+          <br/>
+          <p>
+          {% assign dirlist = page.url | split: "/" %}
+          {% assign nlinks = dirlist.size | minus: 1 %}
+          {% assign link = site.baseurl | append: "/" %}
+          {% for i in (1..nlinks) %}
+            <a href="{{ link }}"> ➤  </a>{{ dirlist[i] }}
+            {% assign link = link | append: dirlist[i] | append: "/" %}
+          {% endfor %}
+          </p>
+      </div>
+
       <div class="content">
         {{ content }}
       </div>
