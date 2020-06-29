@@ -143,7 +143,7 @@
               </div>
           </span>
 
-        {% if site.amwa_id contains "IS-" or site.amwa_id contains "MS-" %}
+        {% if site.amwa_id contains "IS-" or site.amwa_id contains "MS-" or site.amwa_id contains "BCP-003-" %}
           <div class="breadcrumbs">
               {% assign dirlist = page.url | split: "/" %}
               {% assign nlinks = dirlist.size | minus: 2 | at_most: 4 %}
