@@ -20,7 +20,7 @@
 
         <div class="header" id="myHeader">
 
-        {% unless site.amwa_id contains "IS-" or site.amwa_id contains "MS-" or site.amwa_id contains "BCP-003-" or site.amwa_id contains "BCP-004-" %}
+        {% unless site.amwa_id contains "IS-" or site.amwa_id contains "MS-" or site.amwa_id contains "BCP-002-" or site.amwa_id contains "BCP-003-" or site.amwa_id contains "BCP-004-" %}
             <a href="{{ site.baseurl }}/">HOME</a>
         {% endunless %}
 
@@ -121,6 +121,7 @@
               <span class="dropdown">BCP-...
               <div class="dropdown-content">
                   <p><a href="https://{{ site.spec_server }}/bcp-002">BCP-002 Grouping</a></p>
+                  <p><a href="https://{{ site.spec_server }}/bcp-002-01">BCP-002-01 Natural Grouping</a></p>
                   <p><a href="https://{{ site.spec_server }}/bcp-003">BCP-003 API Security</a></p>
                   <p><a href="https://{{ site.spec_server }}/bcp-003-01">BCP-003-01 Secure Communications</a></p>
                   <p><a href="https://{{ site.spec_server }}/bcp-003-02">BCP-003-02 Authorization Practice</a></p>
