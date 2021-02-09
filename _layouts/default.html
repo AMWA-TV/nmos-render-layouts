@@ -27,7 +27,7 @@
           {% case site.amwa_id %}
 
           {% when "NMOS" %}
-            <a href="{{ site.baseurl }}/branches/main/NMOS_Technical_Overview.html">OVERVIEW</a>
+            <a href="{{ site.baseurl }}/branches/main/docs/2.0._Technical_Overview.html">OVERVIEW</a>
 
           {% when "BCP-002" %}
             <span class="dropdown">RECS...
@@ -78,7 +78,6 @@
                     <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/APIs/schemas">SCHEMAS</a></p>
                     <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/examples">EXAMPLES</a></p>
                   {% endif %}
-                  <p><a href="{{ site.github.repository_url }}">REPO</a></p>
                 </div>
               </span>
               <span class="dropdown">VERSIONS...
@@ -87,17 +86,18 @@
                   <p><a href="{{ site.baseurl }}/branches">DEVELOPMENT BRANCHES</a></p>
                 </div>
               </span>
-            {% else %}
-              UNKNOWN ID
             {% endif %}
 
+            {% else %}
+              UNKNOWN ID
           {% endcase %}
 
+          <a href="{{ site.github.repository_url }}">REPO</a>
           <span class="dropdown">INFO...
             <div class="dropdown-content">
-                <p><a href="https://{{ site.spec_server }}/nmos/branches/main/FAQ.html">FAQ</a></p>
-                <p><a href="https://{{ site.spec_server }}/nmos/branches/main/Glossary.html">Glossary</a></p>
-                <p><a href="https://{{ site.spec_server }}/nmos/branches/main/NMOS-Solutions.html">Implementations</a></p>
+                <p><a href="https://{{ site.spec_server }}/nmos/branches/main/docs/3.0._FAQ.html">FAQ</a></p>
+                <p><a href="https://{{ site.spec_server }}/nmos/branches/main/docs/4.0._Glossary.html">Glossary</a></p>
+                <p><a href="https://{{ site.spec_server }}/nmos/branches/main/5.0._NMOS_Solutions.html">Implementations</a></p>
                 <p><a href="https://github.com/AMWA-TV/nmos/wiki">WIKI</a></p>
             </div>
           </span>
