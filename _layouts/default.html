@@ -78,6 +78,7 @@
                     <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/APIs/schemas">SCHEMAS</a></p>
                     <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/examples">EXAMPLES</a></p>
                   {% endif %}
+                  <p><a href="{{ site.github.repository_url }}">REPO</a></p>
                 </div>
               </span>
               <span class="dropdown">VERSIONS...
@@ -86,13 +87,12 @@
                   <p><a href="{{ site.baseurl }}/branches">DEVELOPMENT BRANCHES</a></p>
                 </div>
               </span>
-            {% endif %}
-
             {% else %}
               UNKNOWN ID
+            {% endif %}
+
           {% endcase %}
 
-          <a href="{{ site.github.repository_url }}">REPO</a>
           <span class="dropdown">INFO...
             <div class="dropdown-content">
                 <p><a href="https://{{ site.spec_server }}/nmos/branches/main/FAQ.html">FAQ</a></p>
