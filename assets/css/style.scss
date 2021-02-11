@@ -47,7 +47,14 @@ body {
       height: 64px;
       margin-top: 10px;
       margin-bottom: 10px;
-      // border: 3px solid red;
+    }
+
+    #amwa-logo {
+      display: table-cell;
+      width: 191px;
+      height: 64px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
 
     #title {
@@ -59,17 +66,15 @@ body {
         padding-bottom: 10px;
         color: #f1f1f1;
         background-color: #80a0ff;
-        // border: 3px solid green;
     }
 
-    #amwa-logo {
+    #from-amwa-logo {
       display: table-cell;
       align-self: center;
       width: 243px;
       height: 64px;
       margin-top: 10px;
       margin-bottom: 10px;
-      // border: 3px solid red;
     }
   }
   
