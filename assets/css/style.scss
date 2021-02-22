@@ -133,18 +133,21 @@ body {
       .breadcrumbs {
         height: 40px;
         line-height: 40px;
-        background: $dark;
+        background: $light;
 
         a {
-            color: $mid_dark;
+            color: $dark;
         }
       }
 
       .version-warning {
-        background-color: #ff8080;
-        color: #ff80ff;
+        background-color: #eea892;
         padding-left: 10px;
         padding-right: 10px;
+        
+        a {
+          color: #df5327;
+        }
       }
 
   }
