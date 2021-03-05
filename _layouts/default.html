@@ -95,7 +95,7 @@
               <span class="dropdown">VERSIONS...
                 <div class="dropdown-content">
                   <p><a href="{{ site.baseurl }}/releases">PUBLISHED RELEASES</a></p>
-                  <p><a href="{{ site.baseurl }}/branches">DEVELOPMENT BRANCHES</a></p>
+                  <p><a href="{{ site.baseurl }}/branches">LIVE BRANCHES</a></p>
                 </div>
               </span>
             {% endif %}
@@ -172,11 +172,11 @@
               {% endfor %}
               {% if dirlist.size > 2 %}
                 {% if dirlist[1] == "branches" %}
-                  <span class="version-warning"><a href="{{ site.baseurl }}/releases">Viewing development version. Click here for list of published versions.</a></span>
+                  <span class="version-warning"><a href="{{ site.baseurl }}/releases">Viewing live branch. Click here for list of published releases.</a></span>
                 {% elsif dirlist[1] == "releases" %}
                   {% assign this_tree = dirlist[2] | prepend: "releases/" %}
                   {% if this_tree != site.default_tree  %}
-                    <span class="version-warning"><a href="{{ site.baseurl }}/releases">Viewing old version. Click here for list of published versions.</a></span>
+                    <span class="version-warning"><a href="{{ site.baseurl }}/releases">Viewing old release. Click here for list of published releases.</a></span>
                   {% endif %}
                 {% endif %}
               {% endif %}
