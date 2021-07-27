@@ -1,7 +1,9 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+// BUG: pages-themes/primer#58
+@import "jekyll-theme-primer";
+//@import "{{ site.theme }}";
 
 $dark: #418ab3;
 $mid_dark: #6faacb;
