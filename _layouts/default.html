@@ -148,6 +148,7 @@
                       <p><a href="https://{{ site.spec_server }}/bcp-003-03">BCP-003-03 Certificate Provisioning</a></p>
                       <p><a href="https://{{ site.spec_server }}/bcp-004-01">BCP-004-01 Receiver Capabilities</a></p>
                       <p><a href="https://{{ site.spec_server }}/bcp-005-01">BCP-005-01 EDID to Receiver Caps Mapping</a></p>
+                      <p><a href="https://{{ site.spec_server }}/bcp-006-01">BCP-006-01 NMOS With JPEG XS</a></p>
                   </div>
                   </span>
                   <span class="dropdown">MORE...
@@ -169,7 +170,14 @@
               </div>
           </span>
 
-        {% if site.amwa_id contains "IS-" or site.amwa_id contains "MS-" or site.amwa_id contains "BCP-003-" or site.amwa_id contains "BCP-004-" %}
+        {% if site.amwa_id contains "IS-"
+           or site.amwa_id contains "MS-"
+           or site.amwa_id contains "BCP-002-"
+           or site.amwa_id contains "BCP-003-"
+           or site.amwa_id contains "BCP-004-"
+           or site.amwa_id contains "BCP-005-"
+           or site.amwa_id contains "BCP-006-" %}
+
           <div class="breadcrumbs">
               {% assign dirlist = page.url | split: "/" %}
               {% assign nlinks = dirlist.size | minus: 2 | at_most: 4 %}
@@ -195,6 +203,7 @@
         </div>
 
       <div class="content">
+        <br/>
         {{ content }}
       </div>
 
