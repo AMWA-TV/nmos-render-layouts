@@ -39,7 +39,16 @@
             <a href="https://amwa.tv/projects/AS-11.shtml">AS-11</a>
 
           {% when "NMOS" %}
-            <a href="{{ site.baseurl }}/branches/main/docs/Technical_Overview.html">OVERVIEW</a>
+            <span class="dropdown">INTRO
+              <div class="dropdown-content">
+                  <p><a href="https://www.amwa.tv/nmos-overview">Introduction to NMOS</a></p>
+                  <p><a href="https://{{ site.spec_server }}/nmos/branches/main/docs/Technical_Overview.html">NMOS Technical Overview</a></p>
+                  <p><a href="https://{{ site.spec_server }}/nmos/branches/main/docs/FAQ.html">FAQ</a></p>
+                  <p><a href="https://{{ site.spec_server }}/nmos/branches/main/docs/Glossary.html">Glossary</a></p>
+                  <p><a href="https://{{ site.spec_server }}/nmos/branches/main/docs/NMOS_Solutions.html">Implementations</a></p>
+                  <p><a href="https://github.com/AMWA-TV/nmos/wiki">WIKI (Legacy)</a></p>
+              </div>
+            </span>
 
           {% when "BCP-002" %}
             <span class="dropdown">RECS...
@@ -109,59 +118,22 @@
 
           {% if site.amwa_id != "SPECS" %}
 
-              <a href="{{ site.github.repository_url }}">REPO</a>
-              <span class="dropdown">INFO...
-                <div class="dropdown-content">
-                    <p><a href="https://www.amwa.tv/nmos-overview">Introduction to NMOS</a></p>
-                    <p><a href="https://{{ site.spec_server }}/nmos/branches/main/docs/Technical_Overview.html">NMOS Technical Overview</a></p>
-                    <p><a href="https://{{ site.spec_server }}/nmos/branches/main/docs/FAQ.html">FAQ</a></p>
-                    <p><a href="https://{{ site.spec_server }}/nmos/branches/main/docs/Glossary.html">Glossary</a></p>
-                    <p><a href="https://{{ site.spec_server }}/nmos/branches/main/docs/NMOS_Solutions.html">Implementations</a></p>
-                    <p><a href="https://github.com/AMWA-TV/nmos/wiki">WIKI (Legacy)</a></p>
-                </div>
-              </span>
-              <span class="dropdown">TOOLS...
-                <div class="dropdown-content">
-                    <p><a href="https://{{ site.spec_server }}/nmos-testing">API Testing Tool</a></p>
-                    <p><a href="https://{{ site.spec_server }}/nmos/Dashboard.html">CI Dashboard</a></p>
-                </div>
-              </span>
-              <span class="dropdown">IS-...
-                  <div class="dropdown-content">
-                      <p><a href="https://{{ site.spec_server }}/is-04">IS-04 Discovery &amp; Registration</a></p>
-                      <p><a href="https://{{ site.spec_server }}/is-05">IS-05 Connection Management</a></p>
-                      <p><a href="https://{{ site.spec_server }}/is-06">IS-06 Network Control</a></p>
-                      <p><a href="https://{{ site.spec_server }}/is-07">IS-07 Event &amp; Tally</a></p>
-                      <p><a href="https://{{ site.spec_server }}/is-08">IS-08 Audio Channel Mapping</a></p>
-                      <p><a href="https://{{ site.spec_server }}/is-09">IS-09 System Parameters</a></p>
-                      <p><a href="https://{{ site.spec_server }}/is-10">IS-10 Authorization</a></p>
-                      <p><a href="https://{{ site.spec_server }}/is-11">IS-11 Sink Metadata Processing</a></p>
-                  </div>
-                  </span>
-                  <span class="dropdown">BCP-...
-                  <div class="dropdown-content">
-                      <p><a href="https://{{ site.spec_server }}/bcp-002">BCP-002 Grouping</a></p>
-                      <p><a href="https://{{ site.spec_server }}/bcp-002-01">BCP-002-01 Natural Grouping</a></p>
-                      <p><a href="https://{{ site.spec_server }}/bcp-003">BCP-003 API Security</a></p>
-                      <p><a href="https://{{ site.spec_server }}/bcp-003-01">BCP-003-01 Secure Communications</a></p>
-                      <p><a href="https://{{ site.spec_server }}/bcp-003-02">BCP-003-02 Authorization Practice</a></p>
-                      <p><a href="https://{{ site.spec_server }}/bcp-003-03">BCP-003-03 Certificate Provisioning</a></p>
-                      <p><a href="https://{{ site.spec_server }}/bcp-004-01">BCP-004-01 Receiver Capabilities</a></p>
-                      <p><a href="https://{{ site.spec_server }}/bcp-005-01">BCP-005-01 EDID to Receiver Caps Mapping</a></p>
-                      <p><a href="https://{{ site.spec_server }}/bcp-006-01">BCP-006-01 NMOS With JPEG XS</a></p>
-                  </div>
-                  </span>
-                  <span class="dropdown">MORE...
-                  <div class="dropdown-content">
-                      <p><a href="https://{{ site.spec_server }}/nmos">General NMOS Documentation</a></p>
-                      <p><a href="https://{{ site.spec_server }}/ms-04">MS-04 Identity &amp; Timing Model</a></p>
-                      <p><a href="https://{{ site.spec_server }}/info-002">INFO-002 Security Implementation Guide</a></p>
-                      <p><a href="https://{{ site.spec_server }}/info-003">INFO-003 Sink Metadata Processing Arch</a></p>
-                      <p><a href="https://{{ site.spec_server }}/info-004">INFO-004 Implementation Guide for DNS-SD</a></p>
-                      <p><a href="https://{{ site.spec_server }}/nmos-parameter-registers">Parameter Registers</a></p>
-                  </div>
-                  </span>
-              {% endif %}
+            {% include spec_menu.html menu_name="IS-..." filter_id="IS-" %}
+            {% include spec_menu.html menu_name="BCP-..." filter_id="BCP-" %}
+            {% include spec_menu.html menu_name="MS-..." filter_id="MS-" %}
+            {% include spec_menu.html menu_name="INFO-..." filter_id="INFO-" %}
+            {% include spec_menu.html menu_name="REGS..." filter_id="NMOS-PARAMETER-REGISTERS" %}
+
+            <span class="dropdown">DEV...
+              <div class="dropdown-content">
+                  <p><a href="{{ site.github.repository_url }}">GitHub Repo</a></p>
+                  <p><a href="https://{{ site.spec_server }}/nmos-testing">API Testing Tool</a></p>
+                  <p><a href="https://{{ site.spec_server }}/nmos/Dashboard.html">CI Dashboard</a></p>
+              </div>
+            </span>
+
+
+          {% endif %}
 
               <span class="dropdown">SEARCH
               <div class="dropdown-content">
