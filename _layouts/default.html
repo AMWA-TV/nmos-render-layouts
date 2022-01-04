@@ -67,19 +67,6 @@
             </span>
 
           {% when "NMOS-PARAMETER-REGISTERS" %}
-            <span class="dropdown">REGISTERS...
-              <div class="dropdown-content">
-                <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/node-service-types">Node Service Types</a></p>
-                <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/device-control-types">Device Control Types</a></p>
-                <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/formats">Formats</a></p>
-                <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/transports">Transports</a></p>
-                <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/device-types">Device Types</a></p>
-                <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/tags">Tags</a></p>
-                <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/flow-attributes">Flow Attributes</a></p>
-                <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/capabilities">Capabilities</a></p>
-                <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/transport-parameters">Transport Parameters</a></p>
-              </div>
-            </span>
 
           {% when "MS-04" %}
             <a href="{{ site.baseurl }}/{{ site.default_tree }}/docs/1.0._Overview.html">OVERVIEW</a>
@@ -122,7 +109,7 @@
             {% include spec_menu.html menu_name="BCP-..." filter_id="BCP-" %}
             {% include spec_menu.html menu_name="MS-..." filter_id="MS-" %}
             {% include spec_menu.html menu_name="INFO-..." filter_id="INFO-" %}
-            {% include spec_menu.html menu_name="REGS..." filter_id="NMOS-PARAMETER-REGISTERS" %}
+            {% include registers_menu.html %}
 
             <span class="dropdown">DEV...
               <div class="dropdown-content">
