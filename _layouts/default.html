@@ -51,14 +51,14 @@
             </span>
 
           {% when "BCP-002" %}
-            <span class="dropdown">RECS...
+            <span class="dropdown">RECS
                 <div class="dropdown-content">
                   <p><a href="{{ site.baseurl }}/branches/main/best-practice-natural-grouping.html">Natural Grouping</a></p>
                 </div>
             </span>
 
           {% when "BCP-003" %}
-            <span class="dropdown">RECS...
+            <span class="dropdown">RECS
                 <div class="dropdown-content">
                   <p><a href="{{ site.baseurl }}/branches/v1.0-dev/bcp-003-01-securing-communications.html">BCP-003-01 Securing Communications</a></p>
                   <p><a href="{{ site.baseurl }}/branches/v1.0-dev/bcp-003-02-authorization.html">BCP-003-02 Authorization</a></p>
@@ -79,9 +79,9 @@
           {% else %}
 
             {% if site.amwa_id contains "IS-" or site.amwa_id contains "BCP-003-" or site.amwa_id contains "BCP-004-" %}
-              <span class="dropdown">SPEC...
+              {% include docs_menu.html %}
+              <span class="dropdown">SPEC
                 <div class="dropdown-content">
-                    <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/docs">DOCS</a></p>
                   {% if site.amwa_id contains "IS-" %}
                     <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/APIs">APIS</a></p>
                   {% endif %}
@@ -91,7 +91,8 @@
                   {% endif %}
                 </div>
               </span>
-              <span class="dropdown">VERSIONS...
+
+              <span class="dropdown">VERSIONS
                 <div class="dropdown-content">
                   <p><a href="{{ site.baseurl }}/releases">PUBLISHED RELEASES</a></p>
                   <p><a href="{{ site.baseurl }}/branches">LIVE BRANCHES</a></p>
@@ -105,13 +106,13 @@
 
           {% if site.amwa_id != "SPECS" %}
 
-            {% include spec_menu.html menu_name="IS-..." filter_id="IS-" %}
-            {% include spec_menu.html menu_name="BCP-..." filter_id="BCP-" %}
-            {% include spec_menu.html menu_name="MS-..." filter_id="MS-" %}
-            {% include spec_menu.html menu_name="INFO-..." filter_id="INFO-" %}
+            {% include spec_menu.html menu_name="IS" filter_id="IS-" %}
+            {% include spec_menu.html menu_name="BCP" filter_id="BCP-" %}
+            {% include spec_menu.html menu_name="MS" filter_id="MS-" %}
+            {% include spec_menu.html menu_name="INFO" filter_id="INFO-" %}
             {% include registers_menu.html %}
 
-            <span class="dropdown">DEV...
+            <span class="dropdown">DEV
               <div class="dropdown-content">
                   <p><a href="{{ site.github.repository_url }}">GitHub Repo</a></p>
                   <p><a href="https://{{ site.spec_server }}/nmos-testing">API Testing Tool</a></p>
