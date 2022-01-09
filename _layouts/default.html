@@ -80,10 +80,11 @@
 
             {% if site.amwa_id contains "IS-" or site.amwa_id contains "BCP-003-" or site.amwa_id contains "BCP-004-" %}
               {% include docs_menu.html %}
-              <span class="dropdown">SPEC
+              {% include apis_menu.html %} 
+              {% include examples_menu.html %}
+
                 <div class="dropdown-content">
                   {% if site.amwa_id contains "IS-" %}
-                    <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/APIs">APIS</a></p>
                   {% endif %}
                   {% if site.amwa_id contains "IS-" or site.amwa_id contains "BCP-004-" %}
                     <p><a href="{{ site.baseurl }}/{{ site.default_tree }}/APIs/schemas">SCHEMAS</a></p>
@@ -92,12 +93,8 @@
                 </div>
               </span>
 
-              <span class="dropdown">VERSIONS
-                <div class="dropdown-content">
-                  <p><a href="{{ site.baseurl }}/releases">PUBLISHED RELEASES</a></p>
-                  <p><a href="{{ site.baseurl }}/branches">LIVE BRANCHES</a></p>
-                </div>
-              </span>
+              {% include versions_menu.html %}
+
             {% endif %}
 
             {% else %}
@@ -106,28 +103,29 @@
 
           {% if site.amwa_id != "SPECS" %}
 
-            {% include spec_menu.html menu_name="IS" filter_id="IS-" %}
-            {% include spec_menu.html menu_name="BCP" filter_id="BCP-" %}
-            {% include spec_menu.html menu_name="MS" filter_id="MS-" %}
-            {% include spec_menu.html menu_name="INFO" filter_id="INFO-" %}
+            {% include spec_menu.html menu_name="IS" menu_title="Interface Specifications" filter_id="IS-" %}
+            {% include spec_menu.html menu_name="BCP" menu_title="Best Common Practices" filter_id="BCP-" %}
+            {% include spec_menu.html menu_name="MS" menu_title="Data Model Specifications" filter_id="MS-" %}
+            {% include spec_menu.html menu_name="INFO" menu_title="Informative Documents" filter_id="INFO-" %}
             {% include registers_menu.html %}
 
-            <span class="dropdown">DEV
+            <span class="dropdown">DEVEL
               <div class="dropdown-content">
-                  <p><a href="{{ site.github.repository_url }}">GitHub Repo</a></p>
-                  <p><a href="https://{{ site.spec_server }}/nmos-testing">API Testing Tool</a></p>
-                  <p><a href="https://{{ site.spec_server }}/nmos/Dashboard.html">CI Dashboard</a></p>
+                <p><b>Developer Links</b></p>
+                <p><a href="{{ site.github.repository_url }}">GitHub Repo</a></p>
+                <p><a href="https://{{ site.spec_server }}/nmos-testing">API Testing Tool</a></p>
+                <p><a href="https://{{ site.spec_server }}/nmos/Dashboard.html">CI Dashboard</a></p>
               </div>
             </span>
 
 
           {% endif %}
 
-              <span class="dropdown">SEARCH
-              <div class="dropdown-content">
-                  <script async src="https://cse.google.com/cse.js?cx=70787015d40930818"></script>
-                  <div class="gcse-searchbox-only"></div>
-              </div>
+          <span class="dropdown">SEARCH
+            <div class="dropdown-content">
+              <script async src="https://cse.google.com/cse.js?cx=70787015d40930818"></script>
+              <div class="gcse-searchbox-only"></div>
+            </div>
           </span>
 
         {% if site.amwa_id contains "IS-"
