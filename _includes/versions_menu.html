@@ -1,12 +1,14 @@
 <span class="dropdown">VERSIONS
 	<div class="dropdown-content"> 
 		<p><b>Branches</b></p>
-		{% for branch in site.data.branches %}
+		{% assign branches_rev = site.data.branches | reverse %}
+		{% for branch in branches_rev %}
 			<p><a href="{{ site.baseurl }}/branches/{{ branch.name }}">{{ branch.name }}</a></p>
 		{% endfor %}
 		{% if site.data.releases.size > 0 %}
 			<p><b>Releases</b></p>
-			{% for release in site.data.releases %}
+			{% assign releases_rev = site.data.releases | reverse %}
+			{% for release in releases_rev %}
 				<p><a href="{{ site.baseurl }}/releases/{{ release.name }}">{{ release.name }}</a></p>
 			{% endfor %}
 		{% else %}
