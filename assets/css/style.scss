@@ -170,3 +170,8 @@ body {
   html {
     scroll-padding-top: 100px;
   } 
+
+  adaptive-width {
+    width: 90vw !important;
+    max-width: unset !important;
+  }
