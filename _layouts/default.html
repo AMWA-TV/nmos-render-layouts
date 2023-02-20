@@ -12,7 +12,7 @@
   <body>
     <div class="container-lg px-3 my-5 markdown-body adaptive-width">
 
-      <div id="logo-banner">
+      <div id="logo-banner" class="adaptive-width">
           {% if site.amwa_id == "SPECS" %}
               <a href="https://www.amwa.tv"><img id="amwa-logo" src="{{ site.baseurl }}/assets/images/AMWA-logo.png" alt="AMWA logo"/></a>
               <span id="title">Advanced Media Workflow Association</span>
@@ -26,7 +26,7 @@
           {% endif %}
       </div>
 
-        <div class="header" id="myHeader">
+        <div id="menu-header" class="header adaptive-width">
 
         {% if site.default_tree == "branches/main" %}
           <a href="{{ site.baseurl }}/">HOME</a>
@@ -137,7 +137,7 @@
     <script>
     window.onscroll = function() {myFunction()};
 
-    var header = document.getElementById("myHeader");
+    var header = document.getElementById("menu-header");
     var sticky = header.offsetTop;
 
     function myFunction() {
