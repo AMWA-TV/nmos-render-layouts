@@ -45,44 +45,46 @@ body {
   }
 
   #logo-banner {
-    display: table;
-    width: 1024px;
+    display: flex;
     background-color: $dark;
 
     #nmos-logo {
-      display: table-cell;
-      width: 191px;
+      flex: 25%;
       height: 64px;
-      margin: 10px;
+      justify-content: flex-start;
+      vertical-align: middle;
       background-color: $dark;
     }
 
     #amwa-logo {
-      display: table-cell;
-      width: 191px;
+      flex: 25%;
       height: 64px;
-      margin: 10px;
+      vertical-align: middle;
       background-color: $dark;
     }
 
     #title {
-        display: table-cell;
+        flex: 50%;
+        height: 64px;
         text-align: center;
         vertical-align: middle;
         font-size: 175%;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 15px;
         color: $light;
         background-color: $dark;
     }
 
     #from-amwa-logo {
-      display: table-cell;
-      align-self: center;
-      width: 243px;
+      flex: 25%;
       height: 64px;
-      margin: 10px;
+      vertical-align: middle;
       background-color: $dark;
+    }
+
+    @media (max-width: 1000px) {
+      #title {
+        display: none;
+      }
     }
   }
   
