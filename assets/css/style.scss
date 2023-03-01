@@ -46,28 +46,24 @@ body {
 
   #logo-banner {
     display: flex;
+    justify-content: space-between;
     background-color: $dark;
 
     #nmos-logo {
-      flex: 25%;
       height: 64px;
-      justify-content: flex-start;
       vertical-align: middle;
       background-color: $dark;
     }
 
     #amwa-logo {
-      flex: 25%;
       height: 64px;
       vertical-align: middle;
       background-color: $dark;
     }
 
     #title {
-        flex: 50%;
         height: 64px;
         text-align: center;
-        vertical-align: middle;
         font-size: 175%;
         padding-top: 15px;
         color: $light;
@@ -75,7 +71,6 @@ body {
     }
 
     #from-amwa-logo {
-      flex: 25%;
       height: 64px;
       vertical-align: middle;
       background-color: $dark;
