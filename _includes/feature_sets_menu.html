@@ -1,0 +1,9 @@
+<span class="dropdown">F-SETS
+	<div class="dropdown-content">
+		<p><b>Control Feature Sets</b></p>
+		{% assign feature_sets_to_show = site.data.feature_sets | where: "show_in_index", true %}
+		{% for feature_set in feature_sets_to_show %}
+			<p><a href="https://specs.amwa.tv/nmos-control-feature-sets/branches/main/{{ feature_set.id }}">{{ feature_set.name }}</a></p>
+		{% endfor %}
+	</div>
+</span>
