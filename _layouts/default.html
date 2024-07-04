@@ -31,6 +31,19 @@
         {% if site.default_tree == "branches/main" %}
           <a href="{{ site.baseurl }}/">HOME</a>
         {% endif %}
+        
+        {% if site.data.specs %}
+          {% include spec_menu.html menu_name="IS" menu_title="Interface Specifications" filter_id="IS-" %}
+          {% include spec_menu.html menu_name="BCP" menu_title="Best Common Practices" filter_id="BCP-" %}
+          {% include spec_menu.html menu_name="MS" menu_title="Data Model Specifications" filter_id="MS-" %}
+          {% include spec_menu.html menu_name="INFO" menu_title="Informative Documents" filter_id="INFO-" %}
+        {% endif %}
+        {% if site.data.registers %}
+          {% include registers_menu.html %}
+        {% endif %}
+        {% if site.data.feature_sets %}
+          {% include feature_sets_menu.html %}
+        {% endif %}
 
         {% if site.data.docs %}
           {% include docs_menu.html %}
@@ -43,18 +56,6 @@
         {% endif %}
         {% if site.data.branches or site.data.releases %}
           {% include versions_menu.html %}
-        {% endif %}
-        {% if site.data.specs %}
-          {% include spec_menu.html menu_name="IS" menu_title="Interface Specifications" filter_id="IS-" %}
-          {% include spec_menu.html menu_name="BCP" menu_title="Best Common Practices" filter_id="BCP-" %}
-          {% include spec_menu.html menu_name="MS" menu_title="Data Model Specifications" filter_id="MS-" %}
-          {% include spec_menu.html menu_name="INFO" menu_title="Informative Documents" filter_id="INFO-" %}
-        {% endif %}
-        {% if site.data.registers %}
-          {% include registers_menu.html %}
-        {% endif %}
-        {% if site.data.feature_sets %}
-          {% include feature_sets_menu.html %}
         {% endif %}
 
           {% if site.amwa_id == "SPECS" %}
