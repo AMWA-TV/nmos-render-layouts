@@ -104,6 +104,15 @@ body {
         color: $dark;
     }
 
+
+    .menu-header-left {
+      text-align: left
+    }
+
+    .menu-header-right {
+      text-align: right
+    }
+
     .dropdown {
       display: inline-block;
       vertical-align: middle;

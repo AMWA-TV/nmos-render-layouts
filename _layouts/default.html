@@ -26,7 +26,7 @@
           {% endif %}
       </div>
 
-        <div id="menu-header" class="header adaptive-width">
+        <div id="menu-header-left" class="header adaptive-width">
 
         {% if site.default_tree == "branches/main" %}
           <a href="{{ site.baseurl }}/">HOME</a>
@@ -44,9 +44,13 @@
         {% if site.data.feature_sets %}
           {% include feature_sets_menu.html %}
         {% endif %}
+        
+        </div>
 
+        <div id="menu-header-right" class="header adaptive-width">
+        
         {% if site.data.docs %}
-          {% include docs_menu.html %}
+        {% include docs_menu.html %}
         {% endif %}
         {% if site.data.apis %}
           {% include apis_menu.html %}
@@ -82,6 +86,8 @@
               <div class="gcse-searchbox-only"></div>
             </div>
           </span>
+        
+        </div>
 
         {% unless site.default_tree == "branches/main" %}
           <div class="breadcrumbs">
